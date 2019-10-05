@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+        <form action="/buy" method="post">
+            <h3>Buy</h3>
+            <p class="text-center text-secondary">Enter the Symbol</p>
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="shares" placeholder="Number of shares" type="number" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Buy!</button>
+    </form>
+
+{% endblock %}

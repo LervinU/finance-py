@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<table class="table table-sm">
+  <thead>
+    <tr></tr>
+      <th scope="col">Share name</th>
+      <th scope="col"># of shares</th>
+      <th scope="col">Price</th>
+      <th scope="col">Holding</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      {% for row in rows %}
+        <tr>
+            <td>{{row.share_name}}</td>
+            <td>{{row.shares_qty}}</td>
+            <td>${{row.share_price}}</td>
+            <td>${{row.holding}}</td>
+        </tr>
+      {% endfor %}
+  </tbody>
+</table>
+<div class="float-right mt-2">
+<h5>Total holdings: ${{total_h}}</h5>
+<h5>Cash left: ${{cash_left}}</h5>
+</div>
+{% endblock %}
